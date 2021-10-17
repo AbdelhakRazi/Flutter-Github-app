@@ -21,7 +21,7 @@ class GithubData {
     if (response.statusCode == 200) {
       return GithubData.fromJson(jsonDecode(response.body));
     } else {
-      throw Exception('Failed to get data from github');
+      throw Exception("No data available");
     }
   }
 }
