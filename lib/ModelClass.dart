@@ -20,8 +20,7 @@ class GithubData {
     final response = await http.get('https://api.github.com/users/' + username);
     if (response.statusCode == 200) {
       return GithubData.fromJson(jsonDecode(response.body));
-    } else {
-      throw Exception("No data available");
     }
+      throw Exception("No data available");
   }
 }
